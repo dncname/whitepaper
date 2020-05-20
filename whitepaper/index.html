@@ -1,0 +1,373 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>DNC Global Whitepaper</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=5, user-scalable=yes" />
+	<style>
+  .imgList {
+    width: 100%;
+    margin: 0 auto;
+    display: none;
+  }
+.img_en_List{
+  width: 100%;
+    margin: 0 auto;
+    display: none;
+}
+  .img_item {
+    width: 100%;
+    border:0px  solid red;
+    background: #9999997a;
+    margin: 0;
+  }
+  #LanguageSwitch{
+    position: fixed;
+    top: 10px;
+    padding: 4px 10px;
+    right: 20px;
+    background: #2867cc;
+    color: white;
+    border-radius: 5px;
+  }
+</style>
+<script>
+  window.onload = function () {
+    var Language = "zh" ; // localStorage.getItem("Language");
+    var imgList = document.getElementsByClassName('imgList')[0].children;
+    document.getElementsByClassName('imgList')[0].style.display = "block";
+
+    var SwitchBtn = document.getElementById("LanguageSwitch");
+    SwitchBtn.onclick = function(){
+      if(Language=="en"){
+        Language = "zh"
+        SwitchBtn.innerHTML="English"
+        document.getElementsByClassName('img_en_List')[0].style.display = "none";
+        document.getElementsByClassName('imgList')[0].style.display = "block";
+        imgList = document.getElementsByClassName('imgList')[0].children;
+        lazyLoad(imgList);
+      }else{
+        Language = "en";
+        SwitchBtn.innerHTML="中文"
+        document.getElementsByClassName('imgList')[0].style.display = "none";
+        document.getElementsByClassName('img_en_List')[0].style.display = "block";
+        imgList = document.getElementsByClassName('img_en_List')[0].children;
+        lazyLoad(imgList);
+       
+      }
+    }
+   lazyLoad(imgList);
+    window.onscroll = function () {
+      lazyLoad(imgList);
+    };
+    function getTop(e) {
+      return e.offsetTop;
+    }
+    function lazyLoad(imgs) {
+      var viewHeight = window.innerHeight;
+      var scrollHeight = document.documentElement.scrollTop || document.body.scrollTop;
+      for (var i = 0; i < imgs.length; i++) {
+        if ((viewHeight + scrollHeight) > getTop(imgs[i])) {
+          (function (i) {
+            setTimeout(function () {
+              var temp = new Image();
+              temp.src = imgs[i].getAttribute('data-src');
+              temp.onload = function () {
+                imgs[i].setAttribute('src', temp.src);
+              }
+            }, 1000)
+          })(i)
+        }
+      }
+    }
+  }
+</script>
+</head>
+
+<body>
+	<div id="LanguageSwitch">English</div>
+<div class="imgList">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(1).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(2).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(3).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(4).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(5).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(6).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(7).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(8).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(9).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(10).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(11).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(12).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(13).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(14).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(15).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(16).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(17).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(18).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(19).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(20).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(21).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(22).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(23).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(24).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(25).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(26).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(27).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(28).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(29).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(30).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(31).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(32).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(33).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(34).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(35).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(36).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(37).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(38).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(39).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(40).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(41).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(42).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(43).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(44).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(45).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(46).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(47).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(48).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(49).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(50).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(51).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(52).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(53).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(54).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(55).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(56).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(57).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(58).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(59).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(60).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(61).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(62).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(63).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(64).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(65).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(66).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(67).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(68).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(69).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(70).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(71).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(72).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(73).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(74).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(75).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(76).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(77).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(78).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(79).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(80).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(81).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(82).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(83).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(84).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(85).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(86).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(87).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(88).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(89).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(90).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(91).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(92).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(93).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(94).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(95).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(96).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(97).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(98).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(99).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(100).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(101).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(102).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(103).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(104).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(105).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(106).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(107).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(108).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(109).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(110).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(111).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(112).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(113).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(114).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="./img/dnc(115).png" width="100%">
+</div>
+<div class="img_en_List">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(1).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(2).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(3).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(4).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(5).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(6).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(7).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(8).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(9).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(10).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(11).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(12).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(13).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(14).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(15).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(16).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(17).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(18).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(19).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(20).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(21).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(22).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(23).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(24).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(25).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(26).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(27).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(28).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(29).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(30).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(31).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(32).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(33).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(34).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(35).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(36).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(37).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(38).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(39).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(40).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(41).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(42).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(43).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(44).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(45).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(46).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(47).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(48).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(49).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(50).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(51).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(52).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(53).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(54).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(55).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(56).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(57).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(58).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(59).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(60).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(61).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(62).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(63).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(64).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(65).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(66).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(67).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(68).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(69).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(70).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(71).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(72).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(73).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(74).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(75).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(76).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(77).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(78).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(79).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(80).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(81).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(82).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(83).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(84).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(85).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(86).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(87).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(88).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(89).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(90).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(91).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(92).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(93).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(94).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(95).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(96).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(97).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(98).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(99).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(100).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(101).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(102).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(103).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(104).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(105).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(106).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(107).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(108).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(109).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(110).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(111).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(112).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(113).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(114).png" width="100%">
+  <img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(115).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(116).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(117).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(118).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(119).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(120).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(121).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(122).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(123).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(124).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(125).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(126).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(127).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(128).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(129).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(130).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(131).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(132).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(133).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(134).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(135).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(136).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(137).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(138).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(139).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(140).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(141).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(142).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(143).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(144).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(145).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(146).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(147).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(148).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(149).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(150).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(151).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(152).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(153).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(154).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(155).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(156).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(157).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(158).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(159).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(160).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(161).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(162).png" width="100%">
+<img class="img_item" src="./img/loading.gif" data-src="img_en/dncen(163).png" width="100%">
+
+
+  </div>
+</body>
+</html>
